@@ -1,5 +1,4 @@
 import { useState} from 'react'
-import './home.css'
 import logo from '../../assets/logo.png'
 import { Link, useNavigate } from 'react-router-dom'
 import { auth } from '../../services/firebaseConnection'
@@ -7,7 +6,7 @@ import { signInWithEmailAndPassword} from 'firebase/auth'
 import { toast } from 'react-toastify'
 import { doc, getDoc } from 'firebase/firestore'
 import { db } from '../../services/firebaseConnection'
-
+import '../../styles/pages/_home.scss'
 
 export default function Home(){
   

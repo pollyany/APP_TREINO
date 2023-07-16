@@ -4,8 +4,9 @@ import { BiNotepad } from "react-icons/bi";
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../services/firebaseConnection";
-import "./workouts.css";
 import { Link } from "react-router-dom";
+import Card from "../../components/Card";
+import '../../styles/pages/_workouts.scss'
 
 export default function Workouts() {
   const [treinos, setTreinos] = useState([]);
@@ -60,24 +61,25 @@ export default function Workouts() {
           <BiNotepad size={25} color="#121212" />
         </Title>
 
-        <div className="container-treinos">
+        <Card>
           {treinos.map((treino) => {
             return (
               <div key={treino.id}>
-                <div className="capa">
+                <div className="item-treino">
                   <img src={treino.image} alt={treino.name} />
                   <div className="text-centro">
                     <h4>Treino de</h4>
                     <h1>{treino.name}</h1>
                   </div>
-                  <Link className="btn-treinos" to={`/iniciarTreino/${treino.id}`}>
+                  <Link className="btn-treinos" to={`/startWorkout/${treino.id}`}>
                     TREINE AGORA
                   </Link>
                 </div>
               </div>
             );
           })}
-        </div>
+        </Card>
+          
       </div>
     </div>
   );

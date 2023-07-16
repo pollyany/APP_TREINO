@@ -3,7 +3,7 @@ import Title from "../../components/Title";
 import { FiEdit } from "react-icons/fi";
 
 
-export default function CreateTraining() {
+export default function CreateWorkout() {
   return (
     <div>
       <Header />

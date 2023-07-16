@@ -1,25 +1,13 @@
-.container-treinos {
-  margin-top: 2em;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
-  grid-gap: 1.2em;
-  padding: 1.5em;
-}
-
-.capa {
+.item-treino {
   position: relative;
   display: flex;
   color: #fff;
-  flex-direction: column;
+  flex-direction: column; 
   border-radius: 5px;
-
 }
-
-
-.capa img {
+.item-treino img {
   border-radius: 5px;
-  min-height: 400px;
+  height: 100vh;
   max-height: 400px;
   object-fit: cover;
 }

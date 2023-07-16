@@ -1,27 +1,21 @@
-.container-ex {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, min(300px));
-  grid-gap: 1.2em;
-  padding: 1.5em;
-}
-
-.item {
+.item-ex {
   text-align: center;
   display: flex;
-  min-height: 350px;
+  height: 100vh;
+  max-height: 430px;
   flex-direction: column;
+  justify-content: space-between;
   border-radius: 5px;
   padding: 12px;
   background-color: #fff;
   box-shadow: 1px 1px 3px #121212;
 }
 
-.item span {
+.item-ex span {
   font-size: 16px;
 }
 
-.item img {
+.item-ex img {
   padding: 15px;
   height: auto;
   width: auto;
@@ -42,6 +36,7 @@
   height: 2em;
   border: none;
   outline: none;
+  box-shadow: 1px 1px 3px #121212;
   cursor: pointer;
 }
 
@@ -55,7 +50,6 @@
   font-weight: 600;
   font-family: Arial, Helvetica, sans-serif;
   transition: all 0.4s;
-  margin-top: auto;
 }
 
 .btn-showModal:hover {

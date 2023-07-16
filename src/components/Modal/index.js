@@ -1,5 +1,5 @@
 import { FiX } from "react-icons/fi";
-import "./modal.css";
+import '../../styles/components/_modal.scss'
 
 export default function Modal({ children, close }) {
   return (

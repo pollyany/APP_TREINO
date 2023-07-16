@@ -15,9 +15,9 @@ import { BiNotepad } from "react-icons/bi";
 import { IoMdSettings } from "react-icons/io";
 import { toast } from 'react-toastify'
 import Modal from "../../components/Modal";
-import "./startTraining.css";
+import '../../styles/pages/_startworkout.scss'
 
-export default function StartTraining() {
+export default function StartWorkout() {
   const { id } = useParams();
   const navigate = useNavigate()
   const [treino, setTreino] = useState([]);

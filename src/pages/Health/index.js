@@ -1,7 +1,8 @@
 import Header from "../../components/Header";
 import Title from "../../components/Title";
-import "./health.css";
 import { IoAccessibility } from "react-icons/io5";
+import '../../styles/pages/_health.scss'
+
 export default function Health() {
   return (
     <div>

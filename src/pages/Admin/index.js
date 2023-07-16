@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import './admin.css'
 import Header from '../../components/Header'
+import '../../styles/pages/_admin.scss'
 
 export default function Admin(){
   const [user, setUser] = useState({})

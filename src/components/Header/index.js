@@ -4,10 +4,9 @@ import { FiEdit, FiUser, FiLogOut } from "react-icons/fi";
 import { BiNotepad, BiHistory } from "react-icons/bi";
 import { IoIosFitness } from "react-icons/io";
 import { IoAccessibility } from "react-icons/io5";
-
-import "./header.css";
 import { auth } from "../../services/firebaseConnection";
 import { signOut } from "firebase/auth";
+import '../../styles/components/_header.scss'
 
 export default function Header() {
   async function sair() {
@@ -32,17 +31,17 @@ export default function Header() {
         <IoIosFitness color="#fff" size={24} />
         Exercícios
       </Link>
-      <Link to="/treinos">
+      <Link to="/workouts">
         <BiNotepad color="#fff" size={24} />
         Treinos
       </Link>
 
-      <Link to="/">
+      <Link to="/createWorkout">
         <FiEdit color="#fff" size={23} />
         Personalizado
       </Link>
 
-      <Link to="/saude">
+      <Link to="/health">
         <IoAccessibility color="#fff" size={24} />
         Saúde
       </Link>

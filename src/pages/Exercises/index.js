@@ -4,8 +4,9 @@ import { IoIosFitness } from "react-icons/io";
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../services/firebaseConnection";
-import "./exercises.css";
 import Modal from "../../components/Modal";
+import Card from "../../components/Card";
+import '../../styles/pages/_exercises.scss'
 
 export default function Exercises() {
   const [exercicios, setExercicios] = useState([]);
@@ -148,11 +149,11 @@ export default function Exercises() {
           </select>
         </form>
 
-        <div className="container-ex">
+        <Card>
           {exercicios.map((exercicio) => {
             return (
               <div key={exercicio.id}>
-                <div className="item">
+                <div className="item-ex">
                   <span>{exercicio.name}</span>
                   <img src={exercicio.image} alt={exercicio.name} />
 
@@ -166,7 +167,7 @@ export default function Exercises() {
               </div>
             );
           })}
-        </div>
+        </Card>
       </div>
 
       {showModal && (
@@ -185,22 +186,24 @@ export default function Exercises() {
               2. consequatur voluptatem et magnam pariatur a Quis distinctio ea
               fuga tempore! Et illum nisi rem velit nostrum a molestias ullam.
             </p>
-          
-          <div className="row">
-            <span className="text-title">Dicas:</span>
-            <p>
-              consequatur voluptatem et magnam pariatur a Quis distinctio ea
-              fuga tempore! Et illum nisi rem velit nostrum a molestias ullam.
-              consequatur voluptatem et magnam pariatur a Quis distinctio ea
-              fuga tempore! Et illum nisi rem velit nostrum a molestias ullam.consequatur voluptatem et magnam pariatur a Quis distinctio ea
-              fuga tempore! Et illum nisi rem velit nostrum a molestias ullam.
-            </p>
-          </div>
-          <div className="row">
-            <span>
-              Músculos alvo:<i>Peitoral</i>
-            </span>
-          </div>
+
+            <div className="row">
+              <span className="text-title">Dicas:</span>
+              <p>
+                consequatur voluptatem et magnam pariatur a Quis distinctio ea
+                fuga tempore! Et illum nisi rem velit nostrum a molestias ullam.
+                consequatur voluptatem et magnam pariatur a Quis distinctio ea
+                fuga tempore! Et illum nisi rem velit nostrum a molestias
+                ullam.consequatur voluptatem et magnam pariatur a Quis
+                distinctio ea fuga tempore! Et illum nisi rem velit nostrum a
+                molestias ullam.
+              </p>
+            </div>
+            <div className="row">
+              <span>
+                Músculos alvo:<i>Peitoral</i>
+              </span>
+            </div>
           </div>
         </Modal>
       )}

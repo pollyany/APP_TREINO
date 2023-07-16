@@ -7,9 +7,9 @@ import Error from '../pages/Error';
 import Health from '../pages/Health';
 import Workouts from '../pages/Workouts';
 import Exercises from '../pages/Exercises';
-import CreateTraining from '../pages/CreateTraining';
+import CreateWorkout from '../pages/CreateWorkout';
 import Profile from '../pages/Profile';
-import StartTraining from '../pages/StartTraining';
+import StartWorkout from '../pages/StartWorkout';
 import History from '../pages/History';
 
 function RoutesApp(){
@@ -21,9 +21,9 @@ function RoutesApp(){
       <Route path='/history' element={ <Private><History/></Private>  } />
       <Route path='/exercises' element={ <Private><Exercises/></Private>  } />
       <Route path='/health' element={ <Private><Health/></Private>  } />
-      <Route path='/startTraining/:id' element={ <Private><StartTraining/></Private> } />
+      <Route path='/startWorkout/:id' element={ <Private><StartWorkout/></Private> } />
       <Route path='/workouts' element={ <Private><Workouts/></Private> } />
-      <Route path='/createTraining' element={ <Private><CreateTraining/></Private> } />
+      <Route path='/createWorkout' element={ <Private><CreateWorkout/></Private> } />
       <Route path='/profile' element={ <Private><Profile/></Private> } />
 
       <Route path='*' element={<Error/>}/>

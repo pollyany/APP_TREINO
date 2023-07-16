@@ -1,4 +1,4 @@
-import './title.css'
+import '../../styles/components/_title.scss'
 
 export default function Title({children, name}) {
   return (

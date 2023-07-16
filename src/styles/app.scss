@@ -1,4 +1,6 @@
-* {
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -10,7 +12,6 @@ html, body, #root {
 
 body {
   background-color: #eeeeee;
-  font: 14px;
   font-family: sans-serif;
 }
 
