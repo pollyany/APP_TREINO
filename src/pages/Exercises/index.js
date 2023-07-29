@@ -1,12 +1,13 @@
-import Header from "../../components/Header";
+import "../../styles/pages/_exercises.scss";
+import Sidebar from "../../components/Sidebar";
 import Title from "../../components/Title";
 import { IoIosFitness } from "react-icons/io";
+import { BiInfoCircle } from "react-icons/bi";
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../services/firebaseConnection";
 import Modal from "../../components/Modal";
-import Card from "../../components/Card";
-import '../../styles/pages/_exercises.scss'
+import Header from "../../components/Header";
 
 export default function Exercises() {
   const [exercicios, setExercicios] = useState([]);
@@ -115,6 +116,7 @@ export default function Exercises() {
     return (
       <div>
         <Header />
+        <Sidebar />
         <div className="content">
           <Title name="Exercícios">
             <IoIosFitness size={25} />
@@ -127,10 +129,11 @@ export default function Exercises() {
     );
   }
   return (
-    <div>
+    <>
       <Header />
+      <Sidebar />
 
-      <div className="content">
+      <main className="content">
         <Title name="Exercícios">
           <IoIosFitness size={25} />
         </Title>
@@ -149,31 +152,24 @@ export default function Exercises() {
           </select>
         </form>
 
-        <Card>
+        <section id="itens-ex">
           {exercicios.map((exercicio) => {
             return (
-              <div key={exercicio.id}>
-                <div className="item-ex">
-                  <span>{exercicio.name}</span>
+              <section key={exercicio.id}>
+                <div className="item-ex"
+                    onClick={() => toggleModal(exercicio)}>
                   <img src={exercicio.image} alt={exercicio.name} />
-
-                  <button
-                    className="btn-showModal"
-                    onClick={() => toggleModal(exercicio)}
-                  >
-                    Ver detalhes
-                  </button>
+                  <span>{exercicio.name}</span>
                 </div>
-              </div>
+              </section>
             );
           })}
-        </Card>
-      </div>
+        </section>
+      </main>
 
       {showModal && (
-        <Modal close={() => setShowModal(!showModal)}>
-          <h3>{detail.name}</h3>
-          <div>
+        <Modal close={() => setShowModal(!showModal)} title={detail.name}>
+          <div className="img-modal">
             <img src={detail.image} alt={detail.name} />
           </div>
           <div className="conteudo-2">
@@ -199,7 +195,7 @@ export default function Exercises() {
                 molestias ullam.
               </p>
             </div>
-            <div className="row">
+            <div id="musc-target">
               <span>
                 Músculos alvo:<i>Peitoral</i>
               </span>
@@ -207,6 +203,6 @@ export default function Exercises() {
           </div>
         </Modal>
       )}
-    </div>
+    </>
   );
 }

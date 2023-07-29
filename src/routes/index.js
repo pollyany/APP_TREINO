@@ -14,10 +14,10 @@ import History from '../pages/History';
 
 function RoutesApp(){
   return(
+    
     <Routes>
       <Route path='/' element={<Home/>} />
       <Route path="/register" element={ <Register/> } />
-      <Route path="/admin" element={ <Private><Admin/></Private>  } />
       <Route path='/history' element={ <Private><History/></Private>  } />
       <Route path='/exercises' element={ <Private><Exercises/></Private>  } />
       <Route path='/health' element={ <Private><Health/></Private>  } />

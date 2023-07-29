@@ -1,0 +1,22 @@
+.header {
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    height: 3.5em;
+    background-color: black;
+    align-items: center;
+    padding-left: 1.5em;
+    svg {
+      color: #FAA311;
+      cursor: pointer;
+    }
+    span {
+      margin-left: 0.5em;
+      color: #FAA311;
+    }
+  }
+}

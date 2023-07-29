@@ -1,12 +1,14 @@
-import Header from "../../components/Header";
+import Sidebar from "../../components/Sidebar";
 import Title from "../../components/Title";
 import { IoAccessibility } from "react-icons/io5";
 import '../../styles/pages/_health.scss'
+import Header from '../../components/Header';
 
 export default function Health() {
   return (
     <div>
-      <Header />
+      <Header/>
+      <Sidebar />
 
       <div className="content">
         <Title name="Saúde">

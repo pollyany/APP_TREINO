@@ -1,25 +1,22 @@
-.container-health{
+.container-health {
   display: flex;
   flex-direction: column;
-  background-color: #f8f8f8;
+  background-color: #e28e8e;
   border-radius: 5px;
   padding: 0.8em;
   margin-bottom: 5em;
-}
-
-.container-health h2 {
-  margin-bottom: 1.5em;
-}
-.container-health span {
-  margin-left: 3em;
-  font-size: 1.3em;
-}
-
-.dados {
-  margin-bottom: 2em;
-}
-
-.container-health h3 {
-  text-align: center;
-  color: green;
+  h2 {
+    margin-bottom: 1.5em;
+  }
+  span {
+    margin-left: 3em;
+    font-size: 1.3em;
+  }
+  h3 {
+    text-align: center;
+    color: green;
+  }
+  .dados {
+    margin-bottom: 2em;
+  }
 }

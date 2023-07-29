@@ -51,7 +51,7 @@ async  function fazerLogin(e) {
     <div className="container-center">
 
         <div className="login-area">
-          <h2 className='h2'>Training is life!</h2>
+          <h2>Gym Pro</h2>
           <img src={logo} alt="Logo do sistema de chamados" />
         </div>
 

@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: #F6F7F8;
+  color: #000000;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+.content {
+  margin-left: 16em;
+  margin-right: 2em;
+  padding: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    &::-webkit-scrollbar {
+      width: 0;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+      border-radius: 0;
+    }
+  }
+  .content {
+    margin: 0;
+  }
+}

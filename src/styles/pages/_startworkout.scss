@@ -1,117 +1,109 @@
+@use "../core/mixins";
+
 .loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include mixins.center-item;
   height: 80vh;
 }
 .content-treino {
   display: flex;
   height: 100vh;
   flex-direction: column;
-  align-items: center
-}
-.content-treino .list-exercicios {
-  width: 700px;
-  max-width: 80%;
-  height: 65%;
-  max-height: 700px;
-  border-radius: 5px;
-  background-color: #FFFFFF;
-  margin-top: 3em;
-  box-shadow: 1px 1px 6px 1px;
-  text-align: center;
-}
-.header-list {
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-  padding: 1.3em 1.3em 0.6em;
-}
-.header-list button {
-  margin-left: auto;
-  margin-right: 1em;
-  border: none;
-  background-color: transparent;
-}
-.list-exercicios article {
-  display: flex;
   align-items: center;
-  max-height: 6em;
-  margin-top: 0.3em;
-}
-.list-exercicios img {
-  width: 6em;
-  height: auto;
-}
-.list-exercicios .btn-init {
-  width: 50%;
-  margin-top: 1em;
-  height: 1.8em;
-  font-size: 16px;
-  font-weight: 600;
-  background-color: #35e035;
-  transition: all 0.3s;
-}
-
-.list-exercicios .btn-init:hover {
-  background-color: #18bd18;
-}
-.list-exercicios .name-ex {
- width: 300px;
- margin-left: 1em;
-}
-
-.area-span {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  margin-left: auto;
-  margin-right: 0.5em;
-}
-.area-span div {
-  width: 4em;
-  height: 3em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #d6d6d6;
-  border-radius: 5px;
-  font-size: 0.9em;
-  padding: 0.3em 0.6em;
-  color: #fff;
-}
-
-.area-span span {
-  color: #121212;
-  font-weight: 600;
-  margin-bottom: 0.2em;
-}
-.list-exercicios .btn-edit {
-  margin-left: auto;
-  border: 0;
-  box-shadow: 1px 1px 2px;
-  padding: 0.5em;
-  border-radius: 5px;
-  background-color: rgb(51, 224, 51);
-  
-}
-.list-conteudo {
-  max-width: 100%;
-  max-height: 80%;
-  padding: 1.5em;
-  overflow: hidden;
-  overflow-y: scroll;
-}
-
-.list-conteudo::-webkit-scrollbar {
-  width: 8px;
-  background-color: #FFFFFF;
-  border-radius: 10px;
-}
-
-.list-conteudo::-webkit-scrollbar-thumb {
-  background-color: #cecece;
-  border-radius: 10px;
+  .list-exercicios {
+    width: 700px;
+    max-width: 80%;
+    height: 65%;
+    max-height: 700px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin-top: 3em;
+    box-shadow: 1px 1px 6px 1px;
+    text-align: center;
+    .header-list {
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+      padding: 1.3em 1.3em 0.6em;
+      button {
+        margin-left: auto;
+        margin-right: 1em;
+        border: none;
+        background-color: transparent;
+      }
+    }
+    article {
+      display: flex;
+      align-items: center;
+      max-height: 6em;
+      margin-top: 0.3em;
+    }
+    img {
+      width: 6em;
+      height: auto;
+    }
+    .btn-init {
+      width: 50%;
+      margin-top: 1em;
+      height: 1.8em;
+      font-size: 16px;
+      font-weight: 600;
+      background-color: #35e035;
+      transition: all 0.3s;
+      &:hover {
+        background-color: #18bd18;
+      }
+    }
+    .name-ex {
+      width: 300px;
+      margin-left: 1em;
+    }
+    .btn-edit {
+      margin-left: auto;
+      border: 0;
+      box-shadow: 1px 1px 2px;
+      padding: 0.5em;
+      border-radius: 5px;
+      background-color: rgb(51, 224, 51);
+    }
+    .list-conteudo {
+      max-width: 100%;
+      max-height: 80%;
+      padding: 1.5em;
+      overflow: hidden;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: 8px;
+        background-color: #ffffff;
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #cecece;
+        border-radius: 10px;
+      }
+      .area-span {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        margin-left: auto;
+        margin-right: 0.5em;
+        div {
+          width: 4em;
+          height: 3em;
+          @include mixins.center-item;
+          background-color: #d6d6d6;
+          border-radius: 5px;
+          font-size: 0.9em;
+          padding: 0.3em 0.6em;
+          color: #fff;
+        }
+        span {
+          color: #121212;
+          font-weight: 600;
+          margin-bottom: 0.2em;
+        }
+      }
+    }
+  }
 }
 
 .row-configs {
@@ -119,4 +111,8 @@
   gap: 1em;
   margin-bottom: 1em;
   margin-top: 1em;
+  .input-config {
+    display: flex;
+    gap: 0.5em;
+  }
 }

@@ -39,7 +39,7 @@ export default function Register(){
         name: name,
         email: email,
         senha: password,
-        configsPadrao: {series: 3, reps: 12}
+        configTreinoPadrao: {series: 3, reps: 12, desc:60}
       }).then(() => {
         toast.success("Seja bem-vindo!")
         navigate("/admin")

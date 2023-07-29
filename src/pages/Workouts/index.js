@@ -1,12 +1,12 @@
-import Header from "../../components/Header";
+import Sidebar from "../../components/Sidebar";
 import Title from "../../components/Title";
 import { BiNotepad } from "react-icons/bi";
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../services/firebaseConnection";
 import { Link } from "react-router-dom";
-import Card from "../../components/Card";
 import '../../styles/pages/_workouts.scss'
+import Header from '../../components/Header';
 
 export default function Workouts() {
   const [treinos, setTreinos] = useState([]);
@@ -40,7 +40,8 @@ export default function Workouts() {
   if (loading) {
     return (
       <div>
-        <Header />
+        <Header/>
+        <Sidebar />
         <div className="content">
           <Title name="Treinos">
             <BiNotepad size={25} />
@@ -54,17 +55,17 @@ export default function Workouts() {
   }
 
   return (
-    <div>
-      <Header />
-      <div className="content">
+    <>
+      <Header/>
+      <Sidebar />
+      <main className="content">
         <Title name="Treinos">
           <BiNotepad size={25} color="#121212" />
         </Title>
-
-        <Card>
+        <section className="itens-wo">
           {treinos.map((treino) => {
             return (
-              <div key={treino.id}>
+              <section key={treino.id}>
                 <div className="item-treino">
                   <img src={treino.image} alt={treino.name} />
                   <div className="text-centro">
@@ -75,12 +76,12 @@ export default function Workouts() {
                     TREINE AGORA
                   </Link>
                 </div>
-              </div>
+              </section>
             );
           })}
-        </Card>
+        </section>
           
-      </div>
-    </div>
+      </main>
+    </>
   );
 }

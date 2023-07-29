@@ -1,0 +1,136 @@
+@use "../../styles/core/mixins";
+.sidebar {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  width: 15.2em;
+  .divLogo {
+    margin: 1rem auto;
+    width: 145px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background-color: #df9400;
+    border: 3px solid black;
+    img {
+      width: 90px;
+      height: 90px;
+      display: block;
+      margin: auto;
+    }
+  }
+  .name {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  a {
+    height: 4.5em;
+    border-top: 2px solid #272727;
+    display: block;
+    padding: 1em;
+    display: flex;
+    text-decoration: none;
+    color: #ffffffb3;
+    flex-direction: row;
+    align-items: center;
+    transition: ease-in-out 0.4s;
+    svg {
+      margin-right: 0.5rem;
+    }
+    &:hover {
+      background-color: #272727;
+      color: rgb(248, 248, 248, 0.9);
+    }
+  }
+  #sair {
+    border: none;
+    position: fixed;
+    bottom: 0;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+#over-sidebar-mb{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  .sidebar-mobile {
+  background-color: #121212;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 12em;
+  animation: close 0.4s;
+
+  .header-sidebar-mb {
+    padding: 1em;
+    margin-bottom: 1.5em;
+    display: flex;
+    justify-content: end;
+    button {
+      border: none;
+      background-color: transparent;
+      color: #fff;
+    }
+  }
+  a {   
+    display: block;
+    padding: 16px;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    flex-direction: row;
+    align-items: center;
+    transition: ease-in-out 0.4s;
+    svg {
+      margin-right: 0.5rem;
+      color: #df9400;
+    }
+    &:hover {
+      background-color: #272727;
+    }
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    a{
+      color: rgb(153, 153, 153);
+      border: none;
+      &:hover {
+        background-color: transparent;
+        color: #fff;
+      }
+    }
+  }
+  }
+}
+
+@keyframes close {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 12em;
+  }
+}
+@media screen and (max-width: 1279px) {
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

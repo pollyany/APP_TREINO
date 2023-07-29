@@ -1,11 +1,12 @@
-import Header from "../../components/Header";
+import Sidebar from "../../components/Sidebar";
 import Title from "../../components/Title";
 import { FiUser } from "react-icons/fi";
-
+import Header from '../../components/Header';
 export default function Profile() {
   return (
     <div>
-      <Header />
+      <Header/>
+      <Sidebar />
 
       <div className="content">
         <Title name="Perfil">

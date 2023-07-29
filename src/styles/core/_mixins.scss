@@ -1,0 +1,19 @@
+@mixin center-item() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin grid-itens {
+  margin-top: 2em;
+  display: grid;
+  justify-content: center;
+  grid-gap: 1.5em;
+  padding: 1.5em;
+  // grid-template-columns: repeat(auto-fit, minmax(13em, 15em));
+}
+
+//   h1 {
+//   @include tetx-style(#ff4043, 34px, Arial);
+// }
